@@ -1,6 +1,6 @@
 console.log("Arquivo JavaScript carregado com sucesso.");
 
-// Exercício 01
+// Exercício 01 
 const titulo = document.getElementById("titulo-principal");
 console.log(titulo);
 
