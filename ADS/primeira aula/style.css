@@ -1,0 +1,20 @@
+img {
+    border: 2px solid black;
+    border-radius: 7px;
+    display: block;
+    margin: 5px;
+    
+}
+input {
+    border: 2px solid black;
+    border-radius: 4px;
+    
+}
+h1 {
+    text-align: center;
+}
+form {
+    display: block;
+    text-align: center;
+
+}

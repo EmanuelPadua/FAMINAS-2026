@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #0a0a0a;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-right: 50px;
+}
+
+img {
+    border-radius: 50%;
+    height: 230px;
+    border: 1px solid gray;
+}
+
+.profile-card {
+    background-color: #1b1b2f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 500px;
+    width: 450px;
+    border-radius: 20px;
+    margin-left: 500px;
+    box-shadow: 0px 0px 5px #3a86ff;
+}
+
+.social-icons {
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #3a86ff;
+    margin: 7px;
+}
+
+a:hover {
+    filter: brightness(150%);
+    transition: filter 0.2s linear;
+}

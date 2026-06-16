@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="script.js"></script>
+  <title>PixelForge Studios — Experiências em Realidade Aumentada</title>
+ 
+  <!-- Google Fonts: Orbitron (display técnico) + Syne (corpo moderno) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@300;400;600&display=swap" rel="stylesheet" />
+ 
+  <!-- Font Awesome para ícones de redes sociais -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+ 
+  <!-- CSS externo separado -->
+  <link rel="stylesheet" href="teste.css" />
+</head>
+<body>
+ 
+  <!-- Cursor personalizado AR -->
+  <div class="ar-cursor" id="arCursor"></div>
+  <div class="ar-cursor-dot" id="arCursorDot"></div>
+ 
+  <!-- Grade de fundo HUD -->
+  <div class="hud-grid" aria-hidden="true"></div>
+ 
+  <!-- Linha de scan animada -->
+  <div class="scan-line" aria-hidden="true"></div>
+ 
+  <!-- ================================================
+       HEADER / NAVEGAÇÃO
+  ================================================ -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+ 
+      <a href="#hero" class="logo" aria-label="PixelForge Studios — página inicial">
+        <span class="logo-bracket">[</span>
+        PIXEL<span class="logo-accent">FORGE</span>
+        <span class="logo-bracket">]</span>
+      </a>
+ 
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul role="list">
+          <li><a href="#servicos"><span class="nav-num">01.</span> Serviços</a></li>
+          <li><a href="#time"><span class="nav-num">02.</span> Time</a></li>
+          <li><a href="#faq"><span class="nav-num">03.</span> FAQ</a></li>
+          <li><a href="#contato"><span class="nav-num">04.</span> Contato</a></li>
+        </ul>
+      </nav>
+ 
+      <div class="social-links" role="navigation" aria-label="Redes sociais">
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+      </div>
+ 
+    </div>
+  </header>
+ 
+  <main>
+ 
+    <!-- ================================================
+         HERO
+    ================================================ -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="hud-corner hud-tl" aria-hidden="true"></div>
+      <div class="hud-corner hud-tr" aria-hidden="true"></div>
+      <div class="hud-corner hud-bl" aria-hidden="true"></div>
+      <div class="hud-corner hud-br" aria-hidden="true"></div>
+ 
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">
+            <span class="eyebrow-dot"></span>
+            SISTEMA ATIVO — AR v2.4.1
+          </p>
+          <h1 id="hero-title">
+            O mundo real<br />
+            é só o<br />
+            <em class="hero-highlight">começo.</em>
+          </h1>
+          <p class="hero-sub">
+            Criamos experiências em Realidade Aumentada que transformam
+            convites, cardápios e treinamentos em portais imersivos.
+            A interface do futuro começa aqui.
+          </p>
+          <div class="hero-cta">
+            <a href="#servicos" class="btn btn-primary">
+              <span>Explorar serviços</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="#contato" class="btn btn-outline">Falar com a equipe</a>
+          </div>
+        </div>
+ 
+        <figure class="hero-visual" aria-label="Demonstração de realidade aumentada">
+          <div class="ar-frame">
+            <img
+              src="https://images.unsplash.com/photo-1535223289429-462029bd69c6?w=700&q=80"
+              alt="Pessoa usando óculos de realidade aumentada com camadas de dados holográficos sobrepostos"
+              class="hero-img"
+            />
+            <div class="ar-overlay ar-overlay-1" aria-hidden="true">
+              <span class="ar-label">AR_LAYER_01</span>
+              <div class="ar-target"></div>
+            </div>
+            <div class="ar-overlay ar-overlay-2" aria-hidden="true">
+              <span class="ar-label">DEPTH: 2.4m</span>
+            </div>
+            <div class="ar-scan-bar" aria-hidden="true"></div>
+          </div>
+          <figcaption class="sr-only">Interface de realidade aumentada da PixelForge em ação</figcaption>
+        </figure>
+      </div>
+ 
+      <div class="hero-stats" aria-label="Estatísticas da empresa">
+        <div class="stat">
+          <strong>+340</strong>
+          <span>Experiências criadas</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <strong>98%</strong>
+          <span>Satisfação dos clientes</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <strong>12</strong>
+          <span>Países atendidos</span>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ================================================
+         SERVIÇOS (tabela)
+    ================================================ -->
+    <section id="servicos" class="section-servicos" aria-labelledby="servicos-title">
+      <div class="container">
+ 
+        <header class="section-header">
+          <p class="section-tag">// MÓDULOS DISPONÍVEIS</p>
+          <h2 id="servicos-title">Nossos Produtos <span class="amp">&amp;</span> Serviços</h2>
+          <p class="section-desc">
+            Cada experiência é uma camada de realidade construída sobre o mundo físico.
+          </p>
+        </header>
+ 
+        <div class="service-gallery" role="list" aria-label="Exemplos visuais dos serviços">
+          <figure role="listitem">
+            <img
+              src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=500&q=80"
+              alt="Convite de evento com realidade aumentada — ao apontar o celular, animações 3D surgem sobre o papel"
+            />
+            <figcaption>AR Convites</figcaption>
+          </figure>
+          <figure role="listitem">
+            <img
+              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=80"
+              alt="Cardápio físico de restaurante com menu digital interativo em realidade aumentada"
+            />
+            <figcaption>AR Cardápios</figcaption>
+          </figure>
+          <figure role="listitem">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&q=80"
+              alt="Treinamento corporativo gamificado com elementos de realidade aumentada e simulações"
+            />
+            <figcaption>AR Treinamentos</figcaption>
+          </figure>
+        </div>
+ 
+        <div class="table-wrapper" role="region" aria-label="Tabela de serviços e preços">
+          <table class="tabela-servicos">
+            <caption>Serviços, descrições e preços da PixelForge Studios</caption>
+            <thead>
+              <tr>
+                <th scope="col">Módulo</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Tecnologia</th>
+                <th scope="col">Investimento</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-highlight">
+                <td class="td-servico">
+                  <i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i>
+                  <span>AR Convites</span>
+                </td>
+                <td>Convites físicos que ganham vida ao serem escaneados — animações, vídeos e mensagens 3D surgem na tela.</td>
+                <td><span class="tech-tag">WebAR</span> <span class="tech-tag">Three.js</span></td>
+                <td class="td-preco">
+                  <span class="preco-label">a partir de</span>
+                  <strong>R$ 2.800</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="td-servico">
+                  <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+                  <span>AR Cardápios</span>
+                </td>
+                <td>Cardápios interativos onde cada prato é visualizado em 3D antes de ser pedido. Integra com sistema de pedidos.</td>
+                <td><span class="tech-tag">AR.js</span> <span class="tech-tag">WebGL</span></td>
+                <td class="td-preco">
+                  <span class="preco-label">a partir de</span>
+                  <strong>R$ 4.500</strong>
+                </td>
+              </tr>
+              <tr class="row-highlight">
+                <td class="td-servico">
+                  <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+                  <span>Treinamentos Gamificados</span>
+                </td>
+                <td>Módulos de treinamento corporativo imersivos com missões, XP, placar e simulações em ambiente aumentado.</td>
+                <td><span class="tech-tag">Unity</span> <span class="tech-tag">Vuforia</span></td>
+                <td class="td-preco">
+                  <span class="preco-label">a partir de</span>
+                  <strong>R$ 9.900</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="td-servico">
+                  <i class="fa-solid fa-building" aria-hidden="true"></i>
+                  <span>AR Corporativo</span>
+                </td>
+                <td>Apresentações, feiras e estandes com experiências AR personalizadas para impacto máximo e memorabilidade.</td>
+                <td><span class="tech-tag">8thWall</span> <span class="tech-tag">Spark AR</span></td>
+                <td class="td-preco">
+                  <span class="preco-label">a partir de</span>
+                  <strong>R$ 7.200</strong>
+                </td>
+              </tr>
+              <tr class="row-highlight">
+                <td class="td-servico">
+                  <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                  <span>Filtros &amp; Efeitos Social</span>
+                </td>
+                <td>Filtros AR para Instagram, TikTok e Snapchat que viralizam e amplificam a presença digital da sua marca.</td>
+                <td><span class="tech-tag">Meta Spark</span> <span class="tech-tag">Lens Studio</span></td>
+                <td class="td-preco">
+                  <span class="preco-label">a partir de</span>
+                  <strong>R$ 1.900</strong>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+ 
+      </div>
+    </section>
+ 
+    <!-- ================================================
+         NOSSO TIME (lista ul)
+    ================================================ -->
+    <section id="time" class="section-time" aria-labelledby="time-title">
+      <div class="container">
+ 
+        <header class="section-header">
+          <p class="section-tag">// OPERADORES DO SISTEMA</p>
+          <h2 id="time-title">Nosso Time</h2>
+          <p class="section-desc">
+            Criadores, engenheiros e visionários que acreditam que a fronteira
+            entre físico e digital é onde a magia acontece.
+          </p>
+        </header>
+ 
+        <ul class="team-list" role="list" aria-label="Membros da equipe PixelForge">
+ 
+          <li class="team-card">
+            <div class="team-avatar">
+              <img
+                src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?w=200&q=80"
+                alt="Foto de Lucas Ferreira, CEO e fundador da PixelForge Studios"
+              />
+              <div class="avatar-hud" aria-hidden="true"></div>
+            </div>
+            <div class="team-info">
+              <strong class="team-name">Lucas Ferreira</strong>
+              <span class="team-role">CEO &amp; Fundador</span>
+              <p class="team-bio">Pioneiro em AR no Brasil com mais de 10 anos criando experiências imersivas para marcas globais.</p>
+            </div>
+          </li>
+ 
+          <li class="team-card">
+            <div class="team-avatar">
+              <img
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&q=80"
+                alt="Foto de Marina Costa, Diretora Criativa da PixelForge Studios"
+              />
+              <div class="avatar-hud" aria-hidden="true"></div>
+            </div>
+            <div class="team-info">
+              <strong class="team-name">Marina Costa</strong>
+              <span class="team-role">Diretora Criativa</span>
+              <p class="team-bio">Designer de experiências com especialização em UX para realidade aumentada e interfaces holográficas.</p>
+            </div>
+          </li>
+ 
+          <li class="team-card">
+            <div class="team-avatar">
+              <img
+                src="https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?w=200&q=80"
+                alt="Foto de Rafael Melo, Lead Developer da PixelForge Studios"
+              />
+              <div class="avatar-hud" aria-hidden="true"></div>
+            </div>
+            <div class="team-info">
+              <strong class="team-name">Rafael Melo</strong>
+              <span class="team-role">Lead Developer</span>
+              <p class="team-bio">Engenheiro especialista em WebGL, Three.js e pipelines de renderização 3D em tempo real.</p>
+            </div>
+          </li>
+ 
+          <li class="team-card">
+            <div class="team-avatar">
+              <img
+                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80"
+                alt="Foto de Ana Ribeiro, Especialista em AR da PixelForge Studios"
+              />
+              <div class="avatar-hud" aria-hidden="true"></div>
+            </div>
+            <div class="team-info">
+              <strong class="team-name">Ana Ribeiro</strong>
+              <span class="team-role">AR Specialist</span>
+              <p class="team-bio">Desenvolvedora certificada Unity e Vuforia. Responsável pelos módulos de treinamento gamificado.</p>
+            </div>
+          </li>
+ 
+          <li class="team-card">
+            <div class="team-avatar">
+              <img
+                src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=200&q=80"
+                alt="Foto de Diego Santos, Gerente de Projetos da PixelForge Studios"
+              />
+              <div class="avatar-hud" aria-hidden="true"></div>
+            </div>
+            <div class="team-info">
+              <strong class="team-name">Diego Santos</strong>
+              <span class="team-role">Gerente de Projetos</span>
+              <p class="team-bio">Scrum Master com histórico em projetos de inovação para varejo, eventos e educação corporativa.</p>
+            </div>
+          </li>
+ 
+        </ul>
+ 
+      </div>
+    </section>
+ 
+    <!-- ================================================
+         FAQ (listas aninhadas)
+    ================================================ -->
+    <section id="faq" class="section-faq" aria-labelledby="faq-title">
+      <div class="container">
+ 
+        <header class="section-header">
+          <p class="section-tag">// BANCO DE DADOS — DÚVIDAS</p>
+          <h2 id="faq-title">Perguntas Frequentes</h2>
+          <p class="section-desc">Tudo que você precisa saber antes de embarcar nessa realidade.</p>
+        </header>
+ 
+        <div class="faq-wrapper">
+          <ul class="faq-categories" role="list">
+ 
+            <li class="faq-category">
+              <h3 class="faq-cat-title">
+                <i class="fa-solid fa-cube" aria-hidden="true"></i>
+                Sobre a Tecnologia AR
+              </h3>
+              <ol class="faq-items" role="list">
+                <li class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+                    <span>O cliente precisa baixar algum aplicativo?</span>
+                    <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+                  </button>
+                  <div class="faq-answer" id="faq-1" hidden>
+                    <p>Na maioria das nossas soluções, <strong>não</strong>. Usamos WebAR, que funciona diretamente pelo navegador — basta apontar a câmera. Para projetos mais complexos com Unity, pode ser necessário um app leve.</p>
+                  </div>
+                </li>
+                <li class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+                    <span>Funciona em qualquer celular?</span>
+                    <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+                  </button>
+                  <div class="faq-answer" id="faq-2" hidden>
+                    <p>Sim! Nossas experiências WebAR funcionam em iOS (Safari) e Android (Chrome) em aparelhos a partir de 2018. Para hardware mais antigo, fazemos adaptações que garantem a experiência.</p>
+                  </div>
+                </li>
+              </ol>
+            </li>
+ 
+            <li class="faq-category">
+              <h3 class="faq-cat-title">
+                <i class="fa-solid fa-dollar-sign" aria-hidden="true"></i>
+                Preços &amp; Prazos
+              </h3>
+              <ol class="faq-items" role="list">
+                <li class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+                    <span>Qual é o prazo mínimo para um projeto?</span>
+                    <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+                  </button>
+                  <div class="faq-answer" id="faq-3" hidden>
+                    <p>Filtros simples para redes sociais ficam prontos em <strong>5 dias úteis</strong>. Cardápios AR ou treinamentos gamificados levam de 3 a 8 semanas dependendo da complexidade.</p>
+                  </div>
+                </li>
+                <li class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+                    <span>Os preços da tabela são fixos?</span>
+                    <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+                  </button>
+                  <div class="faq-answer" id="faq-4" hidden>
+                    <p>São valores de entrada. O orçamento final depende do número de assets 3D, integrações e customizações. Fazemos uma proposta personalizada após o briefing.</p>
+                  </div>
+                </li>
+              </ol>
+            </li>
+ 
+            <li class="faq-category">
+              <h3 class="faq-cat-title">
+                <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                Processo &amp; Suporte
+              </h3>
+              <ol class="faq-items" role="list">
+                <li class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+                    <span>Como funciona o processo de criação?</span>
+                    <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+                  </button>
+                  <div class="faq-answer" id="faq-5" hidden>
+                    <p>Seguimos 4 etapas: <strong>(1) Briefing</strong> — entender seu objetivo; <strong>(2) Conceito</strong> — protótipo visual; <strong>(3) Produção</strong> — desenvolvimento dos assets e AR; <strong>(4) Entrega &amp; Testes</strong> — QA em múltiplos dispositivos.</p>
+                  </div>
+                </li>
+                <li class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+                    <span>Vocês oferecem suporte após a entrega?</span>
+                    <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
+                  </button>
+                  <div class="faq-answer" id="faq-6" hidden>
+                    <p>Sim. Todo projeto inclui <strong>30 dias de suporte gratuito</strong>. Após esse período, oferecemos planos de manutenção mensal com atualizações de conteúdo e suporte técnico prioritário.</p>
+                  </div>
+                </li>
+              </ol>
+            </li>
+ 
+          </ul>
+        </div>
+ 
+      </div>
+    </section>
+ 
+    <!-- ================================================
+         CONTATO (formulário)
+    ================================================ -->
+    <section id="contato" class="section-contato" aria-labelledby="contato-title">
+      <div class="container">
+        <div class="contato-inner">
+ 
+          <div class="contato-info">
+            <header class="section-header section-header--left">
+              <p class="section-tag">// INICIAR CONEXÃO</p>
+              <h2 id="contato-title">Vamos criar<br />algo incrível?</h2>
+              <p class="section-desc">
+                Conta pra gente o que você tem em mente.
+                Nossa equipe responde em até 24h.
+              </p>
+            </header>
+ 
+            <address class="contact-details">
+              <p>
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:hello@pixelforge.studio">hello@pixelforge.studio</a>
+              </p>
+              <p>
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">+55 (11) 99999-9999</a>
+              </p>
+              <p>
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                São Paulo, SP — Brasil
+              </p>
+            </address>
+ 
+            <div class="contato-social" role="navigation" aria-label="Redes sociais da PixelForge">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X da PixelForge">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                <span>@pixelforge</span>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook da PixelForge">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                <span>/pixelforge</span>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram da PixelForge">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                <span>@pixelforge.ar</span>
+              </a>
+            </div>
+          </div>
+ 
+          <div class="form-wrapper">
+            <div class="form-hud-corners" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <form class="contact-form" action="#" method="post" novalidate aria-label="Formulário de contato">
+ 
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nome">Nome completo</label>
+                  <input type="text" id="nome" name="nome" placeholder="Seu nome" required autocomplete="name" aria-required="true" />
+                </div>
+                <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email" aria-required="true" />
+                </div>
+              </div>
+ 
+              <div class="form-group">
+                <label for="assunto">Assunto</label>
+                <input type="text" id="assunto" name="assunto" placeholder="Ex: Cardápio AR para restaurante" required aria-required="true" />
+              </div>
+ 
+              <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva sua ideia ou projeto..." required aria-required="true"></textarea>
+              </div>
+ 
+              <button type="submit" class="btn btn-primary btn-full">
+                <span>Enviar mensagem</span>
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              </button>
+ 
+            </form>
+          </div>
+ 
+        </div>
+      </div>
+    </section>
+ 
+  </main>
+ 
+  <!-- ================================================
+       RODAPÉ
+  ================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-logo">
+        <span class="logo-bracket">[</span>
+        PIXEL<span class="logo-accent">FORGE</span>
+        <span class="logo-bracket">]</span>
+        STUDIOS
+      </p>
+      <p class="footer-copy">
+        &copy; 2025 PixelForge Studios. Todos os direitos reservados.
+        <br /><span>Transformando o mundo real em interface digital.</span>
+      </p>
+      <nav aria-label="Links rápidos do rodapé">
+        <ul class="footer-nav" role="list">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#time">Time</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+ 
+  <script src="script.js"></script>
+ 
+</body>
+</html>

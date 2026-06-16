@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #020617;
+}
+
+section {
+    scroll-margin-top: 180px;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    position: fixed;
+    width: 98%;
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #020617;
+    color: white;
+    border-bottom: 1px solid #5146c9;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+.destaque {
+    color: #5146c9;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover {
+    cursor: pointer;
+    color: #6c5ce7;
+    transition: 0.2s linear;
+}
+
+/* IMG DE FUNDO*/
+.banner img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top;
+    margin-top: 50px;
+}
+
+/* SOBRE NOS */
+.sobre-nos {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: 200px;
+    width: 550px;
+    top: 200px;
+    left: 100px;
+    color: #cbd5e1;
+    gap: 15px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.sobre-nos h1 {
+    font-size: 70px;
+    color: white;
+}
+
+.sobre-nos a {
+    color: white;
+}
+
+/* BUTTON MENU*/
+.btn-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6c5ce7;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    width: 200px;
+    height: 40px;
+    text-decoration: none;
+}
+
+.btn-menu:hover {
+    cursor: pointer;
+    background-color: #5146c9;
+    color: white;
+    transition: 0.2s linear;
+}
+
+.btn-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PRODUTOS */
+.banner-products p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    margin-top: 20px;
+}
+
+.banner-products h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 100px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    border: 1px solid;
+}
+
+.products p {
+    color: white;
+}
+
+.price {
+    color: #5146c9;
+    border-color: white;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 15px;
+    width: 380px;
+    height: 395px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #6c5ce7;
+}
+
+table {
+    font-family: "Saira Stencil", sans-serif;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    color: #6c5ce7;
+    width: 95%;
+    font-size: 15px;
+    background: #01040d;
+    height: 400px;
+    font-size: 17px;
+}
+
+.product-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-cell i {
+    font-size: 20px;
+    color: #6c5ce7;
+}
+
+td,
+th {
+    padding: 20px;
+    border: 1px solid;
+}
+
+table td {
+    color: white;
+}
+
+tr:hover {
+    background: #040d22;
+    transition: 0.3s;
+}
+
+/* PROFILES CARDS */
+.topo-container {
+    background-color: #050a15;
+    margin-top: 80px;
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+    min-height: 90vh;
+}
+
+.topo-container p {
+    color: gray;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.profile-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+.card-profile {
+    background: #071024;
+    border: 1px solid #5146c9;
+    width: 220px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card-profile:hover {
+    transform: translateY(-10px);
+    border: 1px solid #5146c9;
+    box-shadow: 0 0 20px #5146c9;
+}
+
+.card-profile img {
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #5146c9;
+    margin-bottom: 15px;
+}
+
+.card-profile h2 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card-profile span {
+    color: #5146c9;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.card-profile p {
+    color: #aaa;
+    font-size: 15px;
+}
+
+/* FAQ */
+.faq {
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 800px;
+}
+
+.icons-faq {
+    display: flex;
+    align-items: center;
+}
+
+.icons-faq i {
+    font-size: 25px;
+    color: #6c5ce7;
+}
+
+.text-title {
+    color: gray;
+    margin-bottom: 50px;
+}
+
+h2 {
+    margin: 20px;
+}
+
+details {
+    background: #0b1120;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+    list-style: none;
+}
+
+details p {
+    margin-top: 10px;
+    color: #9ca3af;
+}
+
+.icon {
+    font-size: 20px;
+    color: #6c5ce7;
+    transition: 0.3s;
+}
+
+/* FOOTER */
+.Footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #01040d;
+    color: white;
+    height: 530px;
+    padding-top: 80px;
+}
+
+.box {
+    padding: 10px;
+}
+
+.box p {
+    color: gray;
+}
+
+.footer-copy {
+    padding-top: 80px
+}
+
+.box h3 {
+    margin: 10px;
+}
+
+#letra {
+    color: #5146c9;
+}
+
+.contatos {
+    text-decoration: none;
+    color: white;
+    margin: 20px 0px 1px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+    text-decoration: none;
+    color: #5146c9;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+}
+
+.social-icons a:hover {
+    color: #5146c9;
+}
+
+    /* FORM CONTATO */
+.form-contato {
+    width: 60%;
+    max-width: 580px;
+    min-width: 420px;
+    margin-right: 100px;
+    background: #06132a;
+    border: 2px solid #5146c9;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+.row .input-group {
+    flex: 1;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    color: #5146c9;
+    font-size: 12px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #5146c9;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+    height: 110px;
+    resize: none;
+}
+
+input {
+    background: transparent;
+    border: 1px solid #5146c9;
+    padding: 10px;
+    color: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: gray;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #5146c9;
+    box-shadow: 0 0 8px #5146c9;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #5146c9;
+    color: #001b1a;
+    font-weight: bold;
+    border: none;   
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #6c5ce7;
+    transform: scale(1.02);
+}

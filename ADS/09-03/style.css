@@ -1,0 +1,44 @@
+body {
+    background-color: white;
+}
+
+img {
+    border: solid transparent;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+.destaque {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card {
+    border: 2px solid transparent;
+    width: 400px;
+    height: 450px;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: wheat;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
